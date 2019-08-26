@@ -1,7 +1,7 @@
 {
     "name": "wordpress-gutenberg-snippets",
     "displayName": "WordPress Gutenberg Snippets",
-    "description": "Snippets for WordPress Gutenberg Developers (PHP and JavaScript)",
+    "description": "Collection of WordPress Gutenberg Snippets",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.37.0"
@@ -12,8 +12,8 @@
     "contributes": {
         "snippets": [
             {
-                "language": "'javascript', 'php'",
-                "path": "./snippets/snippets.json"
+                "language": "js, php, html, jsx",
+                "path": "./snippets/wp.components.json"
             }
         ]
     }

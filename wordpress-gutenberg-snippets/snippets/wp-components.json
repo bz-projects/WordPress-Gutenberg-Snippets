@@ -1,0 +1,772 @@
+{   
+    "WordPress Component Animate": {
+        "prefix": "wp.com.anim",
+        "body": [
+          "import { Animate } from '@wordpress/components';",
+          " ",
+          "const MyAnimatedNotice = () => (",
+          "    <Animate todo=\"Add missing props\">",
+          "        { ( { className } ) => (",
+          "            <Notice className={ className } status=\"success\">",
+          "                <p>Animation finished.</p>",
+          "            </Notice>",
+          "        ) }",
+          "    </Animate>",
+          ");"
+        ],
+        "description": "WordPress Component Animate"
+    }, 
+
+    "WordPress Component Autocomplete": {
+        "prefix": "wp.com.autocom",
+        "body": [
+          "import { Autocomplete } from '@wordpress/components';",
+          " ",
+          "const MyAutocomplete = () => {",
+          "    const autocompleters = [",
+          "        {",
+          "            name: 'fruit',",
+          "            // The prefix that triggers this completer",
+          "            triggerPrefix: '~',",
+          "            // The option data",
+          "            options: [",
+          "                { visual: '🍎', name: 'Apple', id: 1 },",
+          "                { visual: '🍊', name: 'Orange', id: 2 },",
+          "                { visual: '🍇', name: 'Grapes', id: 3 },",
+          "            ],",
+          "            // Returns a label for an option like \"🍊 Orange\"",
+          "            getOptionLabel: option => (",
+          "                <span>",
+          "                    <span className=\"icon\" >{ option.visual }</span>{ option.name }",
+          "                </span>",
+          "            ),",
+          "            // Declares that options should be matched by their name",
+          "            getOptionKeywords: option => [ option.name ],",
+          "            // Declares that the Grapes option is disabled",
+          "            isOptionDisabled: option => option.name === 'Grapes',",
+          "            // Declares completions should be inserted as abbreviations",
+          "            getOptionCompletion: option => (",
+          "                <abbr title={ option.name }>{ option.visual }</abbr>",
+          "            ),",
+          "        }",
+          "    ];",
+          " ",
+          "    return (",
+          "        <div>",
+          "            <Autocomplete completers={ autocompleters }>",
+          "                { ( { isExpanded, listBoxId, activeId } ) => (",
+          "                    <div",
+          "                        contentEditable",
+          "                        suppressContentEditableWarning",
+          "                        aria-autocomplete=\"list\"",
+          "                        aria-expanded={ isExpanded }",
+          "                        aria-owns={ listBoxId }",
+          "                        aria-activedescendant={ activeId }",
+          "                    >",
+          "                    </div>",
+          "                ) }",
+          "            </Autocomplete>",
+          "            <p>Type ~ for triggering the autocomplete.</p>",
+          "        </div>",
+          "    );",
+          "};"
+        ],
+        "description": "WordPress Component Autocomplete"
+    }, 
+
+    "WordPress Component BaseControl": {
+        "prefix": "wp.com.basecon",
+        "body": [
+          "import { BaseControl } from '@wordpress/components';",
+          " ",
+          "const MyBaseControl = () => (",
+          "    <BaseControl",
+          "        id=\"textarea-1\"",
+          "        label=\"Text\"",
+          "        help=\"Enter some text\"",
+          "    >",
+          "        <textarea",
+          "            id=\"textarea-1\"",
+          "        />",
+          "    </BaseControl>",
+          ");"
+        ],
+        "description": "WordPress Component BaseControl"
+    }, 
+
+    "WordPress Component Button Group": {
+        "prefix": "wp.com.btngp",
+        "body": [
+          "import { Button, ButtonGroup } from '@wordpress/components';",
+          " ",
+          "const MyButtonGroup = () => (",
+          "    <ButtonGroup>",
+          "        <Button isPrimary>Button 1</Button>",
+          "        <Button isPrimary>Button 2</Button>",
+          "    </ButtonGroup>",
+          ");"
+        ],
+        "description": "WordPress Component Button Group"
+    }, 
+
+    "WordPress Component Button": {
+        "prefix": "wp.com.btn",
+        "body": [
+          "import { Button } from \"@wordpress/components\";",
+          " ",
+          "const MyButton = () => (",
+          "    <Button isDefault>",
+          "        Click me!",
+          "    </Button>",
+          ");"
+        ],
+        "description": "WordPress Component Button"
+    }, 
+
+    "WordPress Component Checkbox": {
+        "prefix": "wp.com.ckcon",
+        "body": [
+          "import { CheckboxControl } from '@wordpress/components';",
+          "import { withState } from '@wordpress/compose';",
+          " ",
+          "const MyCheckboxControl = withState( {",
+          "    isChecked: true,",
+          "} )( ( { isChecked, setState } ) => (",
+          "    <CheckboxControl",
+          "        heading=\"User\"",
+          "        label=\"Is author\"",
+          "        help=\"Is the user a author or not?\"",
+          "        checked={ isChecked }",
+          "        onChange={ ( isChecked ) => { setState( { isChecked } ) } }",
+          "    />",
+          ") );"
+        ],
+        "description": "WordPress Component Checkbox"
+      }, 
+
+      "WordPress Component ClipBoad": {
+        "prefix": "wp.com.copybtn",
+        "body": [
+          "import { ClipboardButton } from '@wordpress/components';",
+          "import { withState } from '@wordpress/compose';",
+          " ",
+          "const MyClipboardButton = withState( {",
+          "    hasCopied: false,",
+          "} )( ( { hasCopied, setState } ) => ( ",
+          "    <ClipboardButton",
+          "        isPrimary",
+          "        text=\"Text to be copied.\"",
+          "        onCopy={ () => setState( { hasCopied: true } ) }",
+          "        onFinishCopy={ () => setState( { hasCopied: false } ) }",
+          "    >",
+          "        { hasCopied ? 'Copied!' : 'Copy Text' }",
+          "    </ClipboardButton>",
+          ") );"
+        ],
+        "description": "WordPress Component ClipBoad"
+    }, 
+
+    "WordPress Component Color Indicator": {
+        "prefix": "wp.com.colorind",
+        "body": [
+          "import { ColorIndicator } from '@wordpress/components';",
+          " ",
+          "const MyColorIndicator = () => (",
+          "    <ColorIndicator colorValue=\"#f00\" />",
+          ");"
+        ],
+        "description": "WordPress Component Color Indicator"
+    },
+
+    "WordPress Component Color Palette": {
+        "prefix": "wp.com.colorpalett",
+        "body": [
+          "import { ColorPalette } from '@wordpress/components';",
+          "import { withState } from '@wordpress/compose';",
+          " ",
+          "const MyColorPalette = withState( {",
+          "    color: '#f00',",
+          "} )( ( { color, setState } ) => { ",
+          "    const colors = [ ",
+          "        { name: 'red', color: '#f00' }, ",
+          "        { name: 'white', color: '#fff' }, ",
+          "        { name: 'blue', color: '#00f' }, ",
+          "    ];",
+          " ",
+          "    return ( ",
+          "        <ColorPalette ",
+          "            colors={ colors } ",
+          "            value={ color }",
+          "            onChange={ ( color ) => setState( { color } ) } ",
+          "        />",
+          "    ) ",
+          "} );"
+        ],
+        "description": "WordPress Component Color Palette"
+    }, 
+
+    "WordPress Component Color Picker": {
+        "prefix": "wp.com.colorpick",
+        "body": [
+          "import { ColorPicker } from '@wordpress/components';",
+          "import { withState } from '@wordpress/compose';",
+          " ",
+          "const MyColorPicker = withState( {",
+          "    color: '#f00',",
+          "} )( ( { color, setState } ) => {",
+          "    return (",
+          "        <ColorPicker",
+          "            color={ color }",
+          "            onChangeComplete={ ( value ) => setState( value.hex ) }",
+          "            disableAlpha",
+          "        />",
+          "    );",
+          "} );"
+        ],
+        "description": "WordPress Component Color Picker"
+    }, 
+
+    "WordPress Component Dashicon": {
+      "prefix": "wp.com.dashicon",
+      "body": [
+        "import { Dashicon } from '@wordpress/components';",
+        " ",
+        "const MyDashicon = () => (",
+        "    <div>",
+        "        <Dashicon icon=\"admin-home\" />",
+        "        <Dashicon icon=\"products\" />",
+        "        <Dashicon icon=\"wordpress\" />",
+        "    </div>",
+        ");"
+      ],
+      "description": "WordPress Component Dashicon"
+    }, 
+
+    "WordPress Component Datepicker": {
+      "prefix": "wp.com.date",
+      "body": [
+        "import { DateTimePicker } from '@wordpress/components';",
+        "import { __experimentalGetSettings } from '@wordpress/date';",
+        "import { withState } from '@wordpress/compose';",
+        " ",
+        "const MyDateTimePicker = withState( {",
+        "    date: new Date(),",
+        "} )( ( { date, setState } ) => {",
+        "    const settings = __experimentalGetSettings();",
+        " ",
+        "    // To know if the current timezone is a 12 hour time with look for an \"a\" in the time format.",
+        "    // We also make sure this a is not escaped by a \"/\".",
+        "    const is12HourTime = /a(?!\\\\)/i.test(",
+        "        settings.formats.time",
+        "            .toLowerCase() // Test only the lower case a",
+        "            .replace( /\\\\\\\\/g, '' ) // Replace \"//\" with empty strings",
+        "            .split( '' ).reverse().join( '' ) // Reverse the string and test for \"a\" not followed by a slash",
+        "    );",
+        " ",
+        "    return (",
+        "        <DateTimePicker",
+        "            currentDate={ date }",
+        "            onChange={ ( date ) => setState( { date } ) }",
+        "            is12Hour={ is12HourTime }",
+        "        />",
+        "    );",
+        "} );"
+      ],
+      "description": "WordPress Component Datepicker"
+    }, 
+
+    "WordPress Component Disabled": {
+      "prefix": "wp.com.dis",
+      "body": [
+        "import { Button, Disabled, TextControl } from '@wordpress/components';",
+        "import { withState } from '@wordpress/compose';",
+        " ",
+        "const MyDisabled = withState( {",
+        "    isDisabled: true,",
+        "} )( ( { isDisabled, setState } ) => { ",
+        "    let input = <TextControl label=\"Input\" onChange={ () => {} } />;",
+        "    if ( isDisabled ) {",
+        "        input = <Disabled>{ input }</Disabled>;",
+        "    }",
+        " ",
+        "    const toggleDisabled = () => {",
+        "        setState( ( state ) => ( { isDisabled: ! state.isDisabled } ) );",
+        "    };",
+        " ",
+        "    return (",
+        "        <div>",
+        "            { input }",
+        "            <Button isPrimary onClick={ toggleDisabled }>",
+        "                Toggle Disabled",
+        "            </Button>",
+        "        </div>",
+        "    );",
+        "} );"
+      ],
+      "description": "WordPress Component Disabled"
+    }, 
+
+    "WordPress Component Draggable": {
+      "prefix": "wp.com.drag",
+      "body": [
+        "import { Dashicon, Draggable, Panel, PanelBody } from '@wordpress/components';",
+        " ",
+        "const MyDraggable = () => (",
+        "    <div id=\"draggable-panel\">",
+        "        <Panel header=\"Draggable panel\" >",
+        "            <PanelBody>",
+        "                <Draggable",
+        "                    elementId=\"draggable-panel\"",
+        "                    transferData={ { } }",
+        "                >",
+        "                {",
+        "                    ( { onDraggableStart, onDraggableEnd } ) => (",
+        "                        <Dashicon",
+        "                            icon=\"move\"",
+        "                            onDragStart={ onDraggableStart }",
+        "                            onDragEnd={ onDraggableEnd }",
+        "                            draggable",
+        "                        />",
+        "                    )",
+        "                }",
+        "                </Draggable>",
+        "            </PanelBody>",
+        "        </Panel>",
+        "    </div>",
+        ");"
+      ],
+      "description": "WordPress Component Draggable"
+    }, 
+
+    "WordPress Component Dragzone": {
+      "prefix": "wp.com.dragzone",
+      "body": [
+        "import { DropZoneProvider, DropZone } from '@wordpress/components';",
+        "import { withState } from '@wordpress/compose';",
+        " ",
+        "const MyDropZone = withState( {",
+        "    hasDropped: false,",
+        "} )( ( { hasDropped, setState } ) => (",
+        "    <DropZoneProvider>",
+        "        <div>",
+        "            { hasDropped ? 'Dropped!' : 'Drop something here' }",
+        "            <DropZone ",
+        "                onFilesDrop={ () => setState( { hasDropped: true } ) }",
+        "                onHTMLDrop={ () => setState( { hasDropped: true } )  }",
+        "                onDrop={ () => setState( { hasDropped: true } ) } ",
+        "            />",
+        "        </div>",
+        "    </DropZoneProvider>",
+        ") );"
+      ],
+      "description": "WordPress Component Dragzone"
+    }, 
+
+    "WordPress Component DropDownMenu": {
+      "prefix": "wp.com.dropmenu",
+      "body": [
+        "import { DropdownMenu } from '@wordpress/components';",
+        " ",
+        "const MyDropdownMenu = () => (",
+        "    <DropdownMenu",
+        "        icon=\"move\"",
+        "        label=\"Select a direction\"",
+        "        controls={ [",
+        "            {",
+        "                title: 'Up',",
+        "                icon: 'arrow-up-alt',",
+        "                onClick: () => console.log( 'up' )",
+        "            },",
+        "            {",
+        "                title: 'Right',",
+        "                icon: 'arrow-right-alt',",
+        "                onClick: () => console.log( 'right' )",
+        "            },",
+        "            {",
+        "                title: 'Down',",
+        "                icon: 'arrow-down-alt',",
+        "                onClick: () => console.log( 'down' )",
+        "            },",
+        "            {",
+        "                title: 'Left',",
+        "                icon: 'arrow-left-alt',",
+        "                onClick: () => console.log( 'left' )",
+        "            },",
+        "        ] }",
+        "    />",
+        ");"
+      ],
+      "description": "WordPress Component DropDownMenu"
+    }, 
+
+    "WordPress Component DropDown": {
+      "prefix": "wp.com.dropdown",
+      "body": [
+        "import { Button, Dropdown } from '@wordpress/components';",
+        " ",
+        "const MyDropdown = () => (",
+        "    <Dropdown",
+        "        className=\"my-container-class-name\"",
+        "        contentClassName=\"my-popover-content-classname\"",
+        "        position=\"bottom right\"",
+        "        renderToggle={ ( { isOpen, onToggle } ) => (",
+        "            <Button isPrimary onClick={ onToggle } aria-expanded={ isOpen }>",
+        "                Toggle Popover!",
+        "            </Button>",
+        "        ) }",
+        "        renderContent={ () => (",
+        "            <div>",
+        "                This is the content of the popover.",
+        "            </div>",
+        "        ) }",
+        "    />",
+        ");"
+      ],
+      "description": "WordPress Component DropDown"
+    }, 
+
+    "WordPress Component External Link": {
+      "prefix": "wp.com.exlink",
+      "body": [
+        "import { ExternalLink } from '@wordpress/components';",
+        " ",
+        "const MyExternalLink = () => (",
+        "    <ExternalLink href=\"https://wordpress.org\">WordPress.org</ExternalLink>",
+        ");"
+      ],
+      "description": "WordPress Component External Link"
+    }, 
+
+    "WordPress Component FocalPointPicker": {
+      "prefix": "wp.com.focal",
+      "body": [
+        "import { FocalPointPicker } from '@wordpress/components';",
+        " ",
+        "const MyFocalPointPicker = withState( {",
+        "    focalPoint: {",
+        "        x: 0.5,",
+        "        y: 0.5",
+        "    },",
+        "} )( ( { focalPoint, setState } ) => { ",
+        "    const url = '/path/to/image';",
+        "    const dimensions = {",
+        "        width: 400,",
+        "        height: 100",
+        "    };",
+        "    return ( ",
+        "        <FocalPointPicker ",
+        "            url={ url }",
+        "            dimensions={ dimensions }",
+        "            value={ focalPoint }",
+        "            onChange={ ( focalPoint ) => setState( { focalPoint } ) } ",
+        "        />",
+        "    ) ",
+        "} );",
+        " ",
+        "/* Example function to render the CSS styles based on Focal Point Picker value */",
+        "const renderImageContainerWithFocalPoint = ( url, focalPoint ) => {",
+        "    const style = {",
+        "        backgroundImage: `url(${ url })` ,",
+        "        backgroundPosition: `${ focalPoint.x * 100 }% ${ focalPoint.y * 100 }%`",
+        "    }",
+        "    return <div style={ style } />;",
+        "};"
+      ],
+      "description": "WordPress Component FocalPointPicker"
+    }, 
+
+    "WordPress Component FocusableIframe": {
+      "prefix": "wp.com.focframe",
+      "body": [
+        "import { FocusableIframe } from '@wordpress/components';",
+        " ",
+        "const MyFocusableIframe = () => (",
+        "    <FocusableIframe",
+        "        src=\"/my-iframe-url\"",
+        "        onFocus={ () => console.log( 'iframe is focused' ) }",
+        "    />",
+        ");"
+      ],
+      "description": "WordPress Component FocusableIframe"
+    }, 
+
+    "WordPress Component Fontsize Picker": {
+      "prefix": "wp.com.fontpick",
+      "body": [
+        "import { FontSizePicker } from '@wordpress/components';",
+        "import { withState } from '@wordpress/compose';",
+        "import { __ } from '@wordpress/i18n';",
+        " ",
+        "...",
+        "const MyFontSizePicker = withState( {",
+        "    fontSize: 16,",
+        "} )( ( { fontSize, setState } ) => {",
+        "    const fontSizes = [",
+        "        {",
+        "            name: __( 'Small' ),",
+        "            slug: 'small',",
+        "            size: 12,",
+        "        },",
+        "        {",
+        "            name: __( 'Big' ),",
+        "            slug: 'big',",
+        "            size: 26,",
+        "        },",
+        "    ];",
+        "    const fallbackFontSize = 16;",
+        " ",
+        "    return (",
+        "        <FontSizePicker",
+        "            fontSizes={ fontSizes }",
+        "            value={ fontSize }",
+        "            fallbackFontSize={ fallbackFontSize }",
+        "            onChange={ ( newFontSize ) => {",
+        "                setState( { fontSize: newFontSize } );",
+        "            } }",
+        "        />",
+        "    );",
+        "} );",
+        " ",
+        "...",
+        " ",
+        "<MyFontSizePicker />"
+      ],
+      "description": "WordPress Component Fontsize Picker"
+    }, 
+
+    "WordPress Component FormFileUpload": {
+      "prefix": "wp.com.fileupload",
+      "body": [
+        "import { FormFileUpload } from '@wordpress/components';",
+        " ",
+        "const MyFormFileUpload = () => (",
+        "    <FormFileUpload",
+        "        accept=\"image/*\"",
+        "        onChange={ () => console.log('new image') }",
+        "    >",
+        "        Upload",
+        "    </FormFileUpload>",
+        ");"
+      ],
+      "description": "WordPress Component FormFileUpload"
+    }, 
+
+    "WordPress Component FormControl": {
+      "prefix": "wp.com.formcont",
+      "body": [
+        "import { FormToggle } from '@wordpress/components';",
+        "import { withState } from '@wordpress/compose';",
+        " ",
+        "const MyFormToggle = withState( {",
+        "    checked: true,",
+        "} )( ( { checked, setState } ) => (",
+        "    <FormToggle ",
+        "        checked={ checked }",
+        "        onChange={ () => setState( state => ( { checked: ! state.checked } ) ) } ",
+        "    />",
+        ") );"
+      ],
+      "description": "WordPress Component FormControl"
+    }, 
+
+    "WordPress Component FormTokenField": {
+      "prefix": "wp.com.formtokenfield",
+      "body": [
+        "import { FormTokenField } from '@wordpress/components';",
+        "import { withState } from '@wordpress/compose';",
+        " ",
+        "const MyFormTokenField = withState( {",
+        "    tokens: [],",
+        "    suggestions: [ 'Africa', 'America', 'Antarctica', 'Asia', 'Europe', 'Oceania' ],",
+        "} )( ( { tokens, suggestions, setState } ) => ( ",
+        "    <FormTokenField ",
+        "        value={ tokens } ",
+        "        suggestions={ suggestions } ",
+        "        onChange={ tokens => setState( { tokens } ) }",
+        "        placeholder=\"Type a continent\"",
+        "    />",
+        ") );"
+      ],
+      "description": "WordPress Component FormTokenField"
+    }, 
+
+    "WordPress Component navigateRegions": {
+      "prefix": "wp.com.naviregions",
+      "body": [
+        "import { navigateRegions } from '@wordpress/components';",
+        " ",
+        "const MyComponentWithNavigateRegions = navigateRegions( ",
+        "    () => (",
+        "        <div>",
+        "            <div role=\"region\" tabIndex=\"-1\" aria-label=\"Header\">Header</div>",
+        "            <div role=\"region\" tabIndex=\"-1\" aria-label=\"Content\">Content</div>",
+        "            <div role=\"region\" tabIndex=\"-1\" aria-label=\"Sidebar\">Sidebar</div>",
+        "        </div>",
+        "    )",
+        ");"
+      ],
+      "description": "WordPress Component navigateRegions"
+    }, 
+
+    "WordPress Component WithConstrainedTabbing": {
+      "prefix": "wp.com.withconstr",
+      "body": [
+        "import { withConstrainedTabbing, TextControl, Button } from '@wordpress/components';",
+        "import { withState } from '@wordpress/compose';",
+        " ",
+        "const ConstrainedTabbing = withConstrainedTabbing( ( { children } ) => children );",
+        " ",
+        "const MyComponentWithConstrainedTabbing = withState( {",
+        "    isConstrainedTabbing: false,",
+        "} )( ( { isConstrainedTabbing, setState } ) => { ",
+        "    let form = (",
+        "        <form>",
+        "            <TextControl label=\"Input 1\" onChange={ () => {} } />",
+        "            <TextControl label=\"Input 2\" onChange={ () => {} } />",
+        "        </form>",
+        "    );",
+        "    if ( isConstrainedTabbing ) {",
+        "        form = <ConstrainedTabbing>{ form }</ConstrainedTabbing>;",
+        "    }",
+        " ",
+        "    const toggleConstrain = () => {",
+        "        setState( ( state ) => ( { isConstrainedTabbing: ! state.isConstrainedTabbing } ) );",
+        "    };",
+        " ",
+        "    return (",
+        "        <div>",
+        "            { form }",
+        "            <Button isDefault onClick={ toggleConstrain }>",
+        "                { isConstrainedTabbing ? 'Disable' : 'Enable' } constrain tabbing",
+        "            </Button>",
+        "        </div>",
+        "    );",
+        "} );"
+      ],
+      "description": "WordPress Component WithConstrainedTabbing"
+    },
+
+    "WordPress Component withFallbackStyles": {
+      "prefix": "wp.com.withfall",
+      "body": [
+        "import { withFallbackStyles, Button } from '@wordpress/components';",
+        " ",
+        "const { getComputedStyle } = window;",
+        " ",
+        "const MyComponentWithFallbackStyles = withFallbackStyles( ( node, ownProps ) => {",
+        "    const buttonNode = node.querySelector( 'button' );",
+        "    return {",
+        "        fallbackBackgroundColor: getComputedStyle( buttonNode ).backgroundColor,",
+        "        fallbackTextColor: getComputedStyle( buttonNode ).color,",
+        "    };",
+        "} )(",
+        "    ( { fallbackTextColor, fallbackBackgroundColor } ) => (",
+        "        <div>",
+        "            <Button isPrimary>My button</Button>",
+        "            <div>Text color: { fallbackTextColor }</div>",
+        "            <div>Background color: { fallbackBackgroundColor }</div>",
+        "        </div>",
+        "    )",
+        ");"
+      ],
+      "description": "WordPress Component withFallbackStyles"
+    }, 
+
+    "WordPress Component withFilters": {
+      "prefix": "wp.com.withfilter",
+      "body": [
+        "import { withFilters } from '@wordpress/components';",
+        "import { addFilter } from '@wordpress/hooks';",
+        " ",
+        "const MyComponent = ( { title } ) => <h1>{ title }</h1>;",
+        " ",
+        "const ComponentToAppend = () => <div>Appended component</div>;",
+        " ",
+        "function withComponentAppended( FilteredComponent ) {",
+        "    return ( props ) => (",
+        "        <>",
+        "            <FilteredComponent { ...props } />",
+        "            <ComponentToAppend />",
+        "        </>",
+        "    );",
+        "}",
+        " ",
+        "addFilter(",
+        "    'MyHookName',",
+        "    'my-plugin/with-component-appended',",
+        "    withComponentAppended",
+        ");",
+        " ",
+        "const MyComponentWithFilters = withFilters( 'MyHookName' )( MyComponent );"
+      ],
+      "description": "WordPress Component withFilters"
+    }, 
+
+    "WordPress Component withFocusOutside": {
+      "prefix": "wp.com.withfocusoutside",
+      "body": [
+        "import { withFocusOutside, TextControl } from '@wordpress/components';",
+        " ",
+        "const MyComponentWithFocusOutside = withFocusOutside(",
+        "    class extends React.Component {",
+        "        handleFocusOutside() {",
+        "            console.log( 'Focus outside' );",
+        "        }",
+        " ",
+        "        render() {",
+        "            return (",
+        "                <div>",
+        "                    <TextControl onChange={ ( ) => { } }/>",
+        "                    <TextControl onChange={ ( ) => { } }/>",
+        "                </div>",
+        "            );",
+        "        }",
+        "    }",
+        ");"
+      ],
+      "description": "WordPress Component withFocusOutside"
+    }, 
+
+    "WordPress Component withFocusReturn": {
+      "prefix": "wp.com.withfocusreturn",
+      "body": [
+        "import { withFocusReturn, TextControl, Button } from '@wordpress/components';",
+        "import { withState } from '@wordpress/compose';",
+        " ",
+        "const EnhancedComponent = withFocusReturn(",
+        "    () => (",
+        "        <div>",
+        "            Focus will return to the previous input when this component is unmounted",
+        "            <TextControl",
+        "                autoFocus={ true }",
+        "                onChange={ () => {} }",
+        "            />",
+        "        </div>",
+        "    )",
+        ");",
+        " ",
+        "const MyComponentWithFocusReturn = withState( {",
+        "    text: '',",
+        "} )( ( { text, setState } ) => {",
+        "    const unmount = () => {",
+        "        document.activeElement.blur();",
+        "        setState( { text: '' } );",
+        "    }",
+        " ",
+        "    return (",
+        "        <div>",
+        "            <TextControl",
+        "                placeholder=\"Type something\"",
+        "                value={ text }",
+        "                onChange={ ( text ) => setState( { text } ) }",
+        "            />",
+        "            { text && <EnhancedComponent /> }",
+        "            { text && <Button isDefault onClick={ unmount }>Unmount</Button> }",
+        "        </div>",
+        "    );",
+        "} ); "
+      ],
+      "description": "WordPress Component withFocusReturn"
+    }
+
+}
