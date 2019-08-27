@@ -1,0 +1,106 @@
+{
+    "WordPress Gutenberg Page Template": {
+        "prefix": "wp.pagetemplate",
+        "body": [
+          "function page_gutenberg_portfolio_template() {",
+          "    $postTypeTemplate = get_post_type_object('page');",
+          "    $postTypeTemplate->template = array(",
+          "        array('core/heading', array(",
+          "            content => 'Headline!'",
+          "        )),",
+          "        array('core/paragraph', array(",
+          "            content => 'Text.'",
+          "        )),",
+          "        array('core/freeform', array(",
+          "            content => 'Text in Classic Editor'",
+          "        ))",
+          "    );",
+          "}",
+          "",
+          "add_action('init', 'page_gutenberg_portfolio_template'); );"
+        ],
+        "description": "WordPress Gutenberg "
+      }, 
+
+      "WordPress Gutenberg Theme Support ": {
+        "prefix": "wp.themesupport",
+        "body": [
+          "// Delete Custom Font Sizes",
+          "add_theme_support('disable-custom-font-sizes');",
+          "",
+          "// Delete Custom Colors",
+          "add_theme_support( 'disable-custom-colors' );",
+          "",
+          "// Add Editor Style",
+          "add_theme_support('editor-styles');",
+          "",
+          "// Add Block Style Support",
+          "add_theme_support( 'wp-block-styles' );",
+          "",
+          "// Responsive Embeds (Youtube etc.)",
+          "add_theme_support( 'responsive-embeds' );",
+          "",
+          "// Add Theme Support for Content Sizes -> Full etc. ",
+          "add_theme_support( 'align-wide' );",
+          "",
+          "// Content Width Define",
+          "if ( ! isset( $content_width ) ) {",
+            "$content_width = 1024;",
+          "}"
+        ],
+        "description": "WordPress Gutenberg Theme Support "
+      }, 
+
+      "WordPress Gutenberg Color Palette ": {
+        "prefix": "wp.presets.colorpalette",
+        "body": [
+          "function page_setup_theme_supported_features() {",
+          "    add_theme_support( 'editor-color-palette', array(",
+          "        array(",
+          "            'name' => __( 'strong magenta', 'themeLangDomain' ),",
+          "            'slug' => 'strong-magenta',",
+          "            'color' => '#a156b4',",
+          "        ),",
+          "        array(",
+          "            'name' => __( 'light grayish magenta', 'themeLangDomain' ),",
+          "            'slug' => 'light-grayish-magenta',",
+          "            'color' => '#d0a5db',",
+          "        ),",
+          "        array(",
+          "            'name' => __( 'very light gray', 'themeLangDomain' ),",
+          "            'slug' => 'very-light-gray',",
+          "            'color' => '#eee',",
+          "        ),",
+          "        array(",
+          "            'name' => __( 'very dark gray', 'themeLangDomain' ),",
+          "            'slug' => 'very-dark-gray',",
+          "            'color' => '#444',",
+          "        ),",
+          "    ) );",
+          "}",
+          "add_action( 'after_setup_theme', 'page_setup_theme_supported_features' );"
+        ],
+        "description": "WordPress Gutenberg Color Palette "
+      }, 
+      "WordPress Gutenberg Create Category": {
+        "prefix": "wp.createcategory",
+        "body": [
+          "function gutenberg_modul_category( $categories, $post ) {",
+          "    ",
+          "    // Add Category ",
+          "    return array_merge(",
+          "array(",
+          " array(",
+          "                'slug'  => 'meineblocks',",
+          "'title' => 'Testcategory'",
+          "'icon'  => 'wordpress'",
+          "            ),",
+          "        ),",
+          "        $categories",
+          "    );",
+          "}",
+          "add_filter( 'block_categories', 'gutenberg_modul_category', 10, 2 );"
+        ],
+        "description": "WordPress Gutenberg Create Category"
+      }
+}

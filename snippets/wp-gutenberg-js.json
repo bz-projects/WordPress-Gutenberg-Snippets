@@ -1,0 +1,25 @@
+{
+    "WordPress Gutenberg Style": {
+        "prefix": "wp.styles",
+        "body": [
+          "styles: [",
+          "{",
+          "name: \"test__bg--default\",",
+          "label: __(\"BG White\"),",
+          "isDefault: true",
+          "},",
+          "{",
+          "name: \"test__bg--grey\",",
+          "label: __(\"BG Grey\")",
+          "},",
+          "{",
+          "name: \"test__bg--yellow\",",
+          "label: __(\"BG Yellow\")",
+          "}",
+          "],"
+        ],
+        "description": "WordPress Gutenberg "
+    }
+
+
+}
