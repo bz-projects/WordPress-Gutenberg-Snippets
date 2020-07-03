@@ -1,7 +1,7 @@
 
 # WordPress Gutenberg Snippets
 
-Do you want to extend and develop your own Blocks in Gutenberg? With this plugin you will get a big collection of the useful code snippets. **100+ powerfull Snippets are now available!** 
+Do you want to extend and develop your own Blocks in Gutenberg? With this plugin you will get a big collection of the useful code snippets. **90+ powerfull Snippets are now available!** 
 
 More snippets I will add in the next versions. Enjoy it :) 
 **Note: I use the import '@wordpress' packages**
