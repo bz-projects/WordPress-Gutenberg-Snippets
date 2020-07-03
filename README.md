@@ -1,7 +1,7 @@
 
 # WordPress Gutenberg Snippets
 
-Do you want to extend and develop your own Blocks in Gutenberg? With this plugin you will get a big collection of the useful code snippets. **83 powerfull Snippets are now available!** 
+Do you want to extend and develop your own Blocks in Gutenberg? With this plugin you will get a big collection of the useful code snippets. **100+ powerfull Snippets are now available!** 
 
 More snippets I will add in the next versions. Enjoy it :) 
 **Note: I use the import '@wordpress' packages**
@@ -14,6 +14,11 @@ More snippets I will add in the next versions. Enjoy it :)
 | Gutenberg Theme Supports | wp.themesupport  |
 | Gutenberg Color Palette | wp.presets.colorpalette  |
 | Gutenberg Create Block Category | wp.createcategory  |
+| Gutenberg Add Block Style with PHP | wp.blockstyle.php  |
+| Gutenberg Remove All Block Pattern | wp.removePattern.php  |
+| Gutenberg Add Block Pattern | wp.addPattern.php  |
+| Gutenberg Add Default Gradient | wp.addGradientGutenberg  |
+| Gutenberg Remove Custom Gradients | wp.removeCustomGradients  |
 
 ### Gutenberg | Main [JS] 
 
