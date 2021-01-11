@@ -2,7 +2,7 @@
     "name": "wordpress-gutenberg-snippets",
     "displayName": "WordPress Gutenberg Snippets",
     "description": "Collection of WordPress Gutenberg Snippets",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "publisher": "BenjaminZekavica",
     "author": {
         "name": "Benjamin Zekavica"
@@ -31,7 +31,15 @@
                 "path": "./snippets/wp-components.json"
             },
             {
+                "language": "javascriptreact",
+                "path": "./snippets/wp-components.json"
+            },
+            {
                 "language": "javascript",
+                "path": "./snippets/wp-blocks.json"
+            },
+            {
+                "language": "javascriptreact",
                 "path": "./snippets/wp-blocks.json"
             },
             {
@@ -39,7 +47,15 @@
                 "path": "./snippets/wp-block-editor.json"
             },
             {
+                "language": "javascriptreact",
+                "path": "./snippets/wp-block-editor.json"
+            },
+            {
                 "language": "javascript",
+                "path": "./snippets/wp-guteberg-js.json"
+            },
+            {
+                "language": "javascriptreact",
                 "path": "./snippets/wp-guteberg-js.json"
             },
             {
