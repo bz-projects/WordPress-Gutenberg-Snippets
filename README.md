@@ -124,4 +124,4 @@ More snippets I will add in the next versions. Enjoy it :)
 
 **This extension was created by WordPress Core commiter & Gutenberg Team contributor.**
 
-© Copyright 2019 by Benjamin Zekavica. All rights reserved. 
+© Copyright 2019-2021 by Benjamin Zekavica. All rights reserved. 
