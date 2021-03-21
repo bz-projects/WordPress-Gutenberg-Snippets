@@ -1,6 +1,9 @@
 # Change Log
 Detailed listing of changes. What I have fixed or what was added. Here you can read it. 
 
+### Version 1.3.0
+* FIX - WP Blocks (Thank you BenGamlin for your pull request)
+
 ### Version 1.2.0
 * Added REACT JAVASCRIPT language support
 
